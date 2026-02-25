@@ -1,1 +1,1 @@
-export const BASE_URL = "/api"
+export const BASE_URL = "https://exuverse-assignment-backend-2.onrender.com"
