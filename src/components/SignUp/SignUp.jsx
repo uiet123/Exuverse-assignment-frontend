@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../utils/constants";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./SignUp.css";
 
 const Signup = () => {
+  const navigate = useNavigate(); 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -31,6 +33,7 @@ const Signup = () => {
       );
 
       setMessage(res.data.message);
+      navigate("/dashboard");
       console.log(res.data);
     } catch (err) {
       setMessage(err.response?.data || "Something went wrong");

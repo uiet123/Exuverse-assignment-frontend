@@ -1,6 +1,6 @@
-/* Full screen center */
 .signup-container {
   min-height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,28 +9,28 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Heading */
 .signup-container h2 {
   color: white;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Form card */
 .signup-container form {
   background: white;
   padding: 35px;
-  border-radius: 10px;
-  width: 350px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
-/* Inputs */
 .signup-container input {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 14px;
   transition: 0.3s;
@@ -42,14 +42,13 @@
   box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
 }
 
-/* Button */
 .signup-container button {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
   border: none;
   background-color: #667eea;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -58,26 +57,55 @@
   background-color: #5a67d8;
 }
 
-/* Message */
 .signup-container p {
   margin-top: 15px;
   color: #9ca3af;
   font-size: 14px;
+  text-align: center;
 }
 
 .redirect-text {
   margin-top: 15px;
   color: #9ca3af;
   font-size: 14px;
+  text-align: center;
 }
 
 .login-link {
-  color: #9ca3af;
+  color: #667eea;
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
 }
 
 .login-link:hover {
-  color: #9ca3af;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+  .signup-container form {
+    padding: 30px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 15px;
+  }
+
+  .signup-container form {
+    padding: 25px;
+  }
+
+  .signup-container input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .signup-container button {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
